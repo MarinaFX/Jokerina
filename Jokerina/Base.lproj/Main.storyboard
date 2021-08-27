@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Jokerina" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="9ju-ol-dMw">
+                                <rect key="frame" x="20" y="40" width="374" height="217.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9ju-ol-dMw" secondAttribute="height" multiplier="414:241" id="wHa-PZ-0yT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Tg-V1-oIG">
+                                <rect key="frame" x="20" y="800" width="374" height="42"/>
+                                <color key="backgroundColor" name="POLI"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Próxima piada">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BNr-2g-4PY"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pti-MX-dkI" userLabel="BackgroundView">
+                                <rect key="frame" x="20" y="277.5" width="374" height="156"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9d-A6-Td6">
+                                        <rect key="frame" x="20" y="20" width="334" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXV-Gs-Git">
+                                        <rect key="frame" x="20" y="97" width="334" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="POLI"/>
+                                <constraints>
+                                    <constraint firstItem="B9d-A6-Td6" firstAttribute="top" secondItem="pti-MX-dkI" secondAttribute="top" constant="20" id="CKT-w1-Og7"/>
+                                    <constraint firstAttribute="bottom" secondItem="yXV-Gs-Git" secondAttribute="bottom" constant="35" id="amg-Js-ug5"/>
+                                    <constraint firstAttribute="trailing" secondItem="B9d-A6-Td6" secondAttribute="trailing" constant="20" id="ato-fu-vZU"/>
+                                    <constraint firstItem="yXV-Gs-Git" firstAttribute="top" secondItem="B9d-A6-Td6" secondAttribute="bottom" constant="53" id="bkH-Qh-Pov"/>
+                                    <constraint firstItem="B9d-A6-Td6" firstAttribute="leading" secondItem="pti-MX-dkI" secondAttribute="leading" constant="20" id="s7L-Kg-iX1"/>
+                                    <constraint firstItem="yXV-Gs-Git" firstAttribute="leading" secondItem="pti-MX-dkI" secondAttribute="leading" constant="20" id="tFe-aR-pWg"/>
+                                    <constraint firstAttribute="trailing" secondItem="yXV-Gs-Git" secondAttribute="trailing" constant="20" id="tkk-Fp-kou"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pti-MX-dkI" firstAttribute="top" secondItem="9ju-ol-dMw" secondAttribute="bottom" constant="20" id="0Th-LW-Ko0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pti-MX-dkI" secondAttribute="trailing" constant="20" id="7hW-IQ-l9h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9ju-ol-dMw" secondAttribute="trailing" constant="20" id="DqW-mn-6Kz"/>
+                            <constraint firstItem="9ju-ol-dMw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="Pwq-Tw-SZH"/>
+                            <constraint firstItem="0Tg-V1-oIG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Tbs-8f-qcG"/>
+                            <constraint firstItem="pti-MX-dkI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YzA-dG-ghh"/>
+                            <constraint firstItem="9ju-ol-dMw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eCl-y6-lqP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Tg-V1-oIG" secondAttribute="trailing" constant="20" id="i8P-Qx-tIY"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="0Tg-V1-oIG" secondAttribute="bottom" constant="20" id="kEM-0m-ra4"/>
+                            <constraint firstItem="0Tg-V1-oIG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="pti-MX-dkI" secondAttribute="bottom" constant="50" id="o8e-sC-Z8A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="yXV-Gs-Git" id="geu-db-DAV"/>
+                        <outlet property="backgroundView" destination="pti-MX-dkI" id="T2A-xA-Htu"/>
+                        <outlet property="nextButton" destination="0Tg-V1-oIG" id="aGh-3B-FOV"/>
+                        <outlet property="questionLabel" destination="B9d-A6-Td6" id="VO2-Ef-t3w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="627" height="412"/>
+        <namedColor name="POLI">
+            <color red="0.36470588235294116" green="0.31372549019607843" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
